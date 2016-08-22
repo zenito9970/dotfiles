@@ -1,9 +1,6 @@
 # Created by newuser for 5.0.2
 
 
-autoload -U compinit
-compinit
-
 setopt COMPLETE_IN_WORD
 setopt NO_BEEP
 
