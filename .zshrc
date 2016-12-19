@@ -16,6 +16,7 @@ setopt hist_ignore_all_dups
 setopt auto_cd
 setopt print_eight_bit
 
+alias ls='ls --color=auto'
 alias la='ls -a'
 alias ll='ls -l'
 
@@ -24,6 +25,9 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 function chpwd() { ls  }
+if [ -n "$LS_COLORS" ]; then
+    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+fi
 
 local comp='%B%F{green}%n@%m%f%b'
 local wd='%B%F{blue}%~%f%b'
