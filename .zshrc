@@ -25,9 +25,10 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 function chpwd() { ls  }
-if [ -n "$LS_COLORS" ]; then
-    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-fi
+# if [ -n "$LS_COLORS" ]; then
+#     zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# fi
+# eval $(dircolors .lscolorrc)
 
 local comp='%B%F{green}%n@%m%f%b'
 local wd='%B%F{blue}%~%f%b'
